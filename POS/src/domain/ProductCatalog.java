@@ -6,7 +6,12 @@ public class ProductCatalog {
   private Hashtable productSpecifications = new Hashtable();
 
   public ProductCatalog() {
-    ProductSpecification ps =
+    inicializarProductCatalog();
+
+  }
+
+private void inicializarProductCatalog() {
+	ProductSpecification ps =
         new ProductSpecification(1, 100, "product 1");
     productSpecifications.put(new Integer(1), ps);
     ps = new ProductSpecification(2, 200, "product 2");
@@ -16,8 +21,7 @@ public class ProductCatalog {
     productSpecifications.put(new Integer(3), ps);
     ps = new ProductSpecification(4, 400, "product 4");
     productSpecifications.put(new Integer(4), ps);
-
-  }
+}
 
   public ProductSpecification specification(int upc) {
     return (ProductSpecification) productSpecifications.get(new Integer(upc));
