@@ -23,7 +23,7 @@ private void inicializarProductCatalog() {
     productSpecifications.put(new Integer(4), ps);
 }
 
-  public ProductSpecification specification(int upc) {
+  public ProductSpecification getProductSpecification(int upc) {
     return (ProductSpecification) productSpecifications.get(new Integer(upc));
   }
 }

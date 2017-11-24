@@ -23,7 +23,7 @@ public class Register {
 		{
 			sale = new Sale();
 		}
-		ProductSpecification spec = productCatalog.specification( upc );
+		ProductSpecification spec = productCatalog.getProductSpecification( upc );
 		sale.makeLineItem( spec, quantity );
 	}
 
